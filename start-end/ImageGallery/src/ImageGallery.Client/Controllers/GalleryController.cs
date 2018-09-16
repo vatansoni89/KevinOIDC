@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ImageGallery.Client.Controllers
 {
-    public class GalleryController : Controller
+    public class GalleryController : Controller //
     {
         private readonly IImageGalleryHttpClient _imageGalleryHttpClient;
 
