@@ -1,4 +1,5 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityServer4;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace Marvin.IDP
         }
 
         // identity-related resources (scopes)
+        //The full list what we are supporting. #goto a
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
             return new List<IdentityResource>
@@ -54,7 +56,28 @@ namespace Marvin.IDP
 
         public static IEnumerable<Client> GetClients()
         {
-            return new List<Client>();
+            return new List<Client>()
+            {
+                new Client
+                {
+                    ClientName = "Image Gallery",
+                    ClientId = "imagegalleryclient",
+                    AllowedGrantTypes = GrantTypes.Hybrid,
+                    RedirectUris = new List<string>()
+                    {
+                        "https://localhost:44330/signin-oidc" //Client url + signin-oidc
+                    },
+                    AllowedScopes = //#a allowed scope to be requested by this client.
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId
+                    },
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    }
+                }
+             };
+
         }
     }
 }

@@ -39,5 +39,6 @@ namespace Marvin.IDP
     }
 
     //Marvin.IDP : https://localhost:44365/
+    //Client: https://localhost:44330/
     //http://localhost:21345/.well-known/openid-configuration
 }
