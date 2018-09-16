@@ -1,0 +1,14 @@
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.deps.json
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.runtimeconfig.json
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.runtimeconfig.dev.json
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.dll
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.API.pdb
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.Model.dll
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\bin\Debug\netcoreapp2.0\ImageGallery.Model.pdb
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csprojAssemblyReference.cache
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csproj.CoreCompileInputs.cache
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.AssemblyInfoInputs.cache
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.AssemblyInfo.cs
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.csproj.CopyComplete
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.dll
+D:\Vatan\Kevin Dockx\KevinOIDC\start-end\ImageGallery\src\ImageGallery.API\obj\Debug\netcoreapp2.0\ImageGallery.API.pdb
