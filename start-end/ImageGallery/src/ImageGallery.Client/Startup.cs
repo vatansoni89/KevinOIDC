@@ -72,5 +72,5 @@ namespace ImageGallery.Client
                     template: "{controller=Gallery}/{action=Index}/{id?}");
             });
         }
-    }
+    } 
 }
