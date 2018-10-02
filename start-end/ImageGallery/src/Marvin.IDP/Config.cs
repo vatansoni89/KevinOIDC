@@ -26,6 +26,8 @@ namespace Marvin.IDP
                     {
                         new Claim("given_name", "Frank"),
                         new Claim("family_name", "Underwood"),
+                        new Claim("address", "Main Road 1"),
+                        new Claim("role", "FreeUser")
                     }
                 },
                 new TestUser
@@ -37,7 +39,23 @@ namespace Marvin.IDP
                     Claims = new List<Claim> //Information about the user
                     {
                         new Claim("given_name", "Claire"),
-                        new Claim("family_name", "Underwood"),
+                        new Claim("family_name", "Soni"),
+                        new Claim("address", "Big street 2"),
+                        new Claim("role", "PayingUser")
+                    }
+                },
+                new TestUser
+                {
+                    SubjectId = "b7539694-97e7-4dfe-84da-b4256e1ffe5h",
+                    Username = "Vatan",
+                    Password = "password",
+
+                    Claims = new List<Claim> //Information about the user
+                    {
+                        new Claim("given_name", "Vatan"),
+                        new Claim("family_name", "VatanSoni"),
+                        new Claim("address", "agar malwa"),
+                        new Claim("role", "PayingUser")
                     }
                 }
             };
@@ -50,7 +68,9 @@ namespace Marvin.IDP
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(), //SubjectId
-                new IdentityResources.Profile() // Profile related scopes like given_name & family_name
+                new IdentityResources.Profile(), // Profile related scopes like given_name & family_name
+                new IdentityResources.Address(),
+                new IdentityResource("roles", "Your role(s)", new List<string>(){ "role"})
             };
         }
 
@@ -74,7 +94,9 @@ namespace Marvin.IDP
                     AllowedScopes = //#a allowed scope to be requested by this client.
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Address,
+                        "roles"
                     },
                     ClientSecrets =
                     {

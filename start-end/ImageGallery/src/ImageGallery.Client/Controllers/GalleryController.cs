@@ -1,4 +1,5 @@
-﻿using ImageGallery.Client.Services;
+﻿using IdentityModel.Client;
+using ImageGallery.Client.Services;
 using ImageGallery.Client.ViewModels;
 using ImageGallery.Model;
 using Microsoft.AspNetCore.Authentication;
@@ -167,6 +168,31 @@ namespace ImageGallery.Client.Controllers
             }
 
             throw new Exception($"A problem happened while calling the API: {response.ReasonPhrase}");
+        }
+
+        [Authorize(Roles ="PayingUser")]
+        public async Task<IActionResult> OrderFrame()
+        {
+            // use of UserInfo end point..
+            // To create URI and Call userinfo endpoint (pass access token and parse the result) use nuget package IdentityModel
+
+            var discoveryClient = new DiscoveryClient("https://localhost:44365/");
+            var mataDataResponse = await discoveryClient.GetAsync();
+
+            var userInfoClient = new UserInfoClient(mataDataResponse.UserInfoEndpoint);
+
+            var accessToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);
+
+            var response = await userInfoClient.GetAsync(accessToken);
+
+            if (response.IsError)
+            {
+                throw new Exception("Problem accessing userinfo endpoint...",response.Exception);
+            }
+
+            var address = response.Claims.FirstOrDefault(c => c.Type == "address")?.Value;
+
+            return View(new OrderFrameViewModel(address));
         }
 
         public async Task WriteOutIdentityInformation()
